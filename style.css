@@ -27,8 +27,8 @@
 }
 
 .hover-button {
-  opacity: 0; /* Initially invisible */
-  visibility: hidden; /* Initially hidden from layout */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Hidden from the layout */
   justify-content: center;
   align-items: center;
   margin-top: auto;
@@ -45,7 +45,7 @@
 
 .widget-container:hover .hover-button {
   opacity: 1; /* Fade in */
-  visibility: visible; /* Make the button visible */
+  visibility: visible; /* Make the button interactable */
   transition: opacity 0.4s ease, visibility 0s; /* Instant visibility change after fade-in */
 }
 
@@ -57,4 +57,5 @@
 .hover-button:hover {
   background: rgba(255,255,255,0.1);
 }
+
 

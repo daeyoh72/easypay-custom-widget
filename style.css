@@ -1,102 +1,60 @@
-body {
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .widget-container {
-  position: relative;
-  display: block;
-  width: 340px;
-  height: 250px;
-  background: linear-gradient(to bottom, #ffffff, #004990);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
   border-radius: 12px;
-  padding: 20px;
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #ffffff, #004990);
   color: #0a3166;
-}
-
-.widget-content {
+  text-decoration: none;
+  transition: background 0.3s ease;
   position: relative;
-  z-index: 2;
-  padding: 20px;
-  padding-bottom: 130px; /* Increased space to make room for the button */
-  font-family: 'Montserrat', sans-serif;
-  color: #0a3166;
+  box-sizing: border-box;
 }
 
-.widget-content h1 {
-  font-size: 26px;
-  margin: 0 0 10px;
+.widget-header {
+  font-size: 1.6em;
   font-weight: 700;
+  margin: 0 0 10px;
 }
 
-.widget-content p {
-  font-size: 16px;
+.widget-subheader {
+  font-size: 1em;
   margin: 0;
-  color: #0a3166;
 }
 
 .hover-button {
-  position: absolute;
-  bottom: 30px; /* distance from bottom of the container */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 14px 32px;
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-  border: 2px solid white;
-  background: transparent;
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Ensure it's not clickable before hover */
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 12px 24px;
+  font-size: 1.125em;
   color: white;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  z-index: 3;
-  white-space: nowrap;
-}
-
-.card {
-  background: radial-gradient(circle at center, #ffffff, #004990);
-  transition: background 0.3s ease;
+  border: 2px solid white;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.4s ease, visibility 0s 0.4s; /* Delay visibility change until after fade-out */
 }
 
 .widget-container:hover .hover-button {
-  opacity: 1;
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make it clickable */
+  transition: opacity 0.4s ease, visibility 0s; /* Instantly make it visible */
 }
 
-.glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.4), transparent 60%);
-  opacity: 0.5;
-  mix-blend-mode: screen;
-  transition: background-position 0.1s ease;
-  z-index: 1;
+.widget-container:hover {
+  --x: 50%;
+  --y: 50%;
 }
 
-.card.hover {
-  background: radial-gradient(circle at center, #ffffff, #004990);
-  transition: background 0.3s ease;
+.hover-button:hover {
+  background: rgba(255,255,255,0.1);
 }
 
-.card .hover-button {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-.card:hover .hover-button {
-  opacity: 1;
-  pointer-events: auto;
-}

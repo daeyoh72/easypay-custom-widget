@@ -27,8 +27,8 @@
 }
 
 .hover-button {
-  opacity: 0; /* Start with opacity 0 to hide the button */
-  pointer-events: none; /* Prevent interactions when hidden */
+  opacity: 0; /* Initially invisible */
+  visibility: hidden; /* Initially hidden from layout */
   justify-content: center;
   align-items: center;
   margin-top: auto;
@@ -40,12 +40,13 @@
   background: transparent;
   cursor: pointer;
   text-align: center;
-  transition: opacity 0.4s ease, pointer-events 0s 0.4s; /* Fade in and delay pointer-events */
+  transition: opacity 0.4s ease, visibility 0s 0.4s; /* Fade in and delay visibility change */
 }
 
 .widget-container:hover .hover-button {
-  opacity: 1; /* Fade the button in */
-  pointer-events: auto; /* Allow interactions after fade-in */
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Make the button visible */
+  transition: opacity 0.4s ease, visibility 0s; /* Instant visibility change after fade-in */
 }
 
 .widget-container:hover {
@@ -56,3 +57,4 @@
 .hover-button:hover {
   background: rgba(255,255,255,0.1);
 }
+

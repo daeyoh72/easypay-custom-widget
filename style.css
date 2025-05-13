@@ -28,7 +28,7 @@
 
 .hover-button {
   opacity: 0; /* Initially hidden */
-  visibility: hidden; /* Hidden from the layout */
+  display: flex; /* Ensure it's positioned and takes up space */
   justify-content: center;
   align-items: center;
   margin-top: auto;
@@ -40,13 +40,11 @@
   background: transparent;
   cursor: pointer;
   text-align: center;
-  transition: opacity 0.4s ease, visibility 0s 0.4s; /* Fade in and delay visibility change */
+  transition: opacity 0.4s ease; /* Only transition opacity */
 }
 
 .widget-container:hover .hover-button {
   opacity: 1; /* Fade in */
-  visibility: visible; /* Make the button interactable */
-  transition: opacity 0.4s ease, visibility 0s; /* Instant visibility change after fade-in */
 }
 
 .widget-container:hover {

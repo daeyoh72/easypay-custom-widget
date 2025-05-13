@@ -7,3 +7,11 @@ document.addEventListener("mousemove", (e) => {
   card.style.background = `radial-gradient(circle at ${x}px ${y}px, #ffffff, #004990)`;
 });
 
+document.querySelector(".widget-container").addEventListener("mouseenter", () => {
+  document.querySelector(".card").classList.add("hover");
+});
+
+document.querySelector(".widget-container").addEventListener("mouseleave", () => {
+  document.querySelector(".card").classList.remove("hover");
+});
+

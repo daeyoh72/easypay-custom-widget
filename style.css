@@ -85,3 +85,13 @@ body {
   transition: background-position 0.1s ease;
   z-index: 1;
 }
+.card .hover-button {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.card:hover .hover-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+

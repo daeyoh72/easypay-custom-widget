@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EasyPay Widgets</title>
+  <title>EasyPay Widget Group</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     html, body {
@@ -15,16 +15,15 @@
 
     .widget-wrapper {
       display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: stretch;
+      flex-direction: column;
+      align-items: center;
       gap: 24px;
       padding: 20px;
-      flex-wrap: wrap;
     }
 
     .widget-container {
-      width: 340px;
+      width: 100%;
+      max-width: 400px;
       height: 250px;
       display: flex;
       flex-direction: column;
@@ -35,9 +34,9 @@
       background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #ffffff, #004990);
       color: #0a3166;
       text-decoration: none;
-      position: relative;
       transition: background 0.3s ease;
-      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
     }
 
     .widget-header {
@@ -64,10 +63,6 @@
       background: transparent;
       cursor: pointer;
       text-align: center;
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
     }
 
     .widget-container:hover .hover-button {
@@ -82,42 +77,35 @@
     .hover-button:hover {
       background: rgba(255,255,255,0.1);
     }
-
-    @media (max-width: 1080px) {
-      .widget-wrapper {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="widget-wrapper">
     <!-- Widget 1 -->
-    <a href="https://www.johnstonesupply.com/store652/request-account" target="_blank" class="widget-container">
-      <div>
-        <h1 class="widget-header">Become a Johnstone Partner</h1>
-        <p class="widget-subheader">New to Johnstone? Click here for New Customer Registration</p>
-      </div>
-      <div class="hover-button">Request Account</div>
-    </a>
-
-    <!-- Widget 2 -->
-    <a href="https://www.johnstonesupply.com/store652/oe-touch-web-access" target="_blank" class="widget-container">
-      <div>
-        <h1 class="widget-header">Register for Online/App Access</h1>
-        <p class="widget-subheader">Order Online Or On The OE Touch App</p>
-      </div>
-      <div class="hover-button">Register Online</div>
-    </a>
-
-    <!-- Widget 3 -->
     <a href="https://secure.billtrust.com/johnstone/ig/signup" target="_blank" class="widget-container">
       <div>
         <h1 class="widget-header">Enroll Now for EasyPay</h1>
         <p class="widget-subheader">Save time by paying your bills electronically</p>
       </div>
       <div class="hover-button">Join Here</div>
+    </a>
+
+    <!-- Widget 2 -->
+    <a href="https://example.com/maintenance" target="_blank" class="widget-container">
+      <div>
+        <h1 class="widget-header">Schedule Maintenance</h1>
+        <p class="widget-subheader">Book your seasonal tune-up in minutes</p>
+      </div>
+      <div class="hover-button">Schedule Now</div>
+    </a>
+
+    <!-- Widget 3 -->
+    <a href="https://example.com/rebates" target="_blank" class="widget-container">
+      <div>
+        <h1 class="widget-header">Claim Your Rebate</h1>
+        <p class="widget-subheader">Get rewarded for upgrading your system</p>
+      </div>
+      <div class="hover-button">Claim Offer</div>
     </a>
   </div>
 </body>

@@ -27,7 +27,7 @@ body {
   position: relative;
   z-index: 2;
   padding: 20px;
-  padding-bottom: 100px; /* Increased space to make room for the button */
+  padding-bottom: 130px; /* Increased space to make room for the button */
   font-family: 'Montserrat', sans-serif;
   color: #0a3166;
 }
@@ -47,7 +47,7 @@ body {
 
 .hover-button {
   position: absolute;
-  bottom: 20px; /* distance from bottom of the container */
+  bottom: 30px; /* distance from bottom of the container */
   left: 50%;
   transform: translateX(-50%);
   padding: 14px 32px;

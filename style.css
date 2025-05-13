@@ -1,0 +1,64 @@
+body {
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.widget-container {
+  position: relative;
+  display: block;
+  width: 340px;
+  height: 250px;
+  background: linear-gradient(to bottom, #ffffff, #004990);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-decoration: none;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.widget-content h1 {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+
+.widget-content p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.hover-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #004990;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.widget-container:hover .hover-button {
+  opacity: 1;
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 250px;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.4), transparent 60%);
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  transition: background-position 0.1s ease;
+}

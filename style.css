@@ -63,6 +63,10 @@ body {
   white-space: nowrap;
 }
 
+.card {
+  background: radial-gradient(circle at center, #ffffff, #004990);
+  transition: background 0.3s ease;
+}
 
 .widget-container:hover .hover-button {
   opacity: 1;

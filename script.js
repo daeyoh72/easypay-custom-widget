@@ -1,9 +1,9 @@
-const container = document.querySelector('.widget-container');
-const glow = document.querySelector('.glow');
-
-container.addEventListener('mousemove', (e) => {
-  const rect = container.getBoundingClientRect();
+document.addEventListener("mousemove", (e) => {
+  const card = document.querySelector(".card");
+  const rect = card.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
-  glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.4), transparent 60%)`;
+
+  card.style.background = `radial-gradient(circle at ${x}px ${y}px, #ffffff, #004990)`;
 });
+

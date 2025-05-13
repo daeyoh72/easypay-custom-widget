@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .widget-container {
@@ -17,31 +17,40 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   text-decoration: none;
-  color: #000;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 20px;
   transition: box-shadow 0.3s ease;
+  color: #0a3166;
+}
+
+.widget-content {
+  position: relative;
+  z-index: 2;
 }
 
 .widget-content h1 {
-  font-size: 22px;
+  font-size: 26px;
   margin: 0 0 10px;
+  font-weight: 700;
 }
 
 .widget-content p {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
+  color: #0a3166;
 }
 
 .hover-button {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: #004990;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid white;
+  background: transparent;
   color: white;
-  padding: 10px 16px;
   border-radius: 6px;
-  font-size: 14px;
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -54,11 +63,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 340px;
-  height: 250px;
+  right: 0;
+  bottom: 0;
   pointer-events: none;
   background: radial-gradient(circle at center, rgba(255,255,255,0.4), transparent 60%);
   opacity: 0.5;
   mix-blend-mode: screen;
   transition: background-position 0.1s ease;
+  z-index: 1;
 }

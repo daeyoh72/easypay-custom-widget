@@ -26,7 +26,12 @@ body {
 .widget-content {
   position: relative;
   z-index: 2;
+  padding: 20px;
+  padding-bottom: 70px; /* Add extra bottom padding */
+  font-family: 'Montserrat', sans-serif;
+  color: #0a3166;
 }
+
 
 .widget-content h1 {
   font-size: 26px;

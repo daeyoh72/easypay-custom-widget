@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>EasyPay Widget</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     html, body {
       margin: 0;
@@ -42,7 +42,8 @@
     }
 
     .hover-button {
-      display: none;
+      opacity: 0;
+      display: flex;
       justify-content: center;
       align-items: center;
       margin-top: auto;
@@ -54,43 +55,26 @@
       background: transparent;
       cursor: pointer;
       text-align: center;
+      transition: opacity 0.4s ease;
+      text-decoration: none;
     }
 
     .widget-container:hover .hover-button {
-      display: flex;
-    }
-
-    .widget-container:hover {
-      --x: 50%;
-      --y: 50%;
+      opacity: 1;
     }
 
     .hover-button:hover {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
     }
   </style>
 </head>
 <body>
-  <a href="https://secure.billtrust.com/johnstone/ig/signup" target="_blank" class="widget-container">
+  <div class="widget-container">
     <div>
       <h1 class="widget-header">Enroll Now for EasyPay</h1>
       <p class="widget-subheader">Save time by paying your bills electronically</p>
     </div>
-    <div class="hover-button">Join Here</div>
-  </a>
-
-  <script>
-    const widget = document.querySelector('.widget-container');
-    
-    widget.addEventListener('mousemove', (e) => {
-      const rect = widget.getBoundingClientRect();
-      const x = e.clientX - rect.left; // X position relative to widget
-      const y = e.clientY - rect.top;  // Y position relative to widget
-
-      // Update the custom properties for gradient position
-      widget.style.setProperty('--x', `${(x / rect.width) * 100}%`);
-      widget.style.setProperty('--y', `${(y / rect.height) * 100}%`);
-    });
-  </script>
+    <a href="https://secure.billtrust.com/johnstone/ig/signup" target="_blank" class="hover-button">Join Here</a>
+  </div>
 </body>
 </html>

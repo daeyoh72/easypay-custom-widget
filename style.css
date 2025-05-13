@@ -32,7 +32,6 @@ body {
   color: #0a3166;
 }
 
-
 .widget-content h1 {
   font-size: 26px;
   margin: 0 0 10px;
@@ -85,13 +84,19 @@ body {
   transition: background-position 0.1s ease;
   z-index: 1;
 }
+
+.card.hover {
+  background: radial-gradient(circle at center, #ffffff, #004990);
+  transition: background 0.3s ease;
+}
+
 .card .hover-button {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
 }
+
 .card:hover .hover-button {
   opacity: 1;
   pointer-events: auto;
 }
-
